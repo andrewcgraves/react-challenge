@@ -7,10 +7,6 @@ const Show = props => {
 
   if (show.image !== null) {
     imageUrl = show.image.medium
-    console.log(imageUrl);
-  } else {
-    console.log("null");
-    
   }
 
   return(
@@ -24,8 +20,7 @@ const Show = props => {
           {(show.rating.average !== null ? `Rating: ${show.rating.average}/10` : null)} <br/>
           {(show.runtime !== null ? `Runtime: ${show.runtime}` : null)} <br/>
           {(show.premiered !== null ? `Premiered: ${show.premiered}` : null)} <br/>
-
-
+          
         </body>
         <body >
           {}

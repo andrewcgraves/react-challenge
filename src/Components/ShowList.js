@@ -4,18 +4,14 @@ import Show from './Show'
 const ShowList = props => {
   const results = props.data;
   let shows;
-  if (true) {
-    //map over the results
-    shows = results.map(show => <Show show={show.show} key={show.show.id}/> );
-    console.log(shows);
-    
-  } else {
-    // TODO: no shows object
-  }
+
+  //map over the results
+  shows = results.map(show => <Show show={show.show} key={show.show.id}/> );
+  console.log(shows);
 
   return(
     <ul>
-      {shows}
+      {(shows.length > 0) ? shows : `No Results...`}
     </ul>
   );
 }

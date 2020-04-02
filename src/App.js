@@ -15,10 +15,12 @@ export default class App extends Component {
     }
   }
 
+  // Preforms a search when the site loads
   componentDidMount() {
     this.preformSearch();
   }
 
+  // Gets info from the TVMaze APi and assigns it to the state
   preformSearch = (query = 'marvel') => {
     axios.get(`http://api.tvmaze.com/search/shows?q=${query}`)
       .then(responce => {

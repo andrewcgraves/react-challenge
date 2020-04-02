@@ -5,10 +5,12 @@ export default class SearchField extends Component {
         searchText: ''
     }
 
+    // Method that is triggered when the text is changed in the search field
     onSearchChange = e => {
         this.setState({searchText: e.target.value})
     }
 
+    // Gets the text from the field and passess it to the onSearch method provided to the component as a prop
     handleSubmit = e => {
         e.preventDefault()
         this.props.onSearch(this.query.value)
@@ -18,9 +20,8 @@ export default class SearchField extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input onChange={this.onSearchChange} name="search" ref={(input) => this.query = input} placeholder="Search..."/>
+                <input onChange={this.onSearchChange} name="search" ref={(input) => this.query = input} placeholder="Enter a show..."/>
                 <button type="submit" id="submit">search</button>
-
             </form>
         )
     }
