@@ -1,0 +1,19 @@
+.groupContainer {
+  overflow: auto;
+  padding: 30px;
+}
+
+.movieText {
+  text-align: left;
+}
+
+.movieImage {
+  float: left;
+  height: 15vmin;
+  margin-right: 20px;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
